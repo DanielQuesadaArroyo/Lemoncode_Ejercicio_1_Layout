@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+// Body
+
+
+// Container
+$base-color-1: red;
+$base-color-2: rgb(48, 42, 226);
+
+@mixin darken($base-color) {
+    background-color: color.scale($base-color, $lightness: -44%);
+}
+
+@mixin lightness($base-color) {
+    background-color: color.scale($base-color, $lightness: 66%);
+}

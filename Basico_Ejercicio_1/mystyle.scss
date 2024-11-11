@@ -1,0 +1,52 @@
+@use 'sass:color' as *;
+@use 'base' as *;
+@use 'palette' as palette1;
+
+body {
+  justify-items: center;
+  background-color: $body-color;
+  color: $body-font-color;
+}
+
+.container-1 {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: repeat($num_column, 100px);
+  grid-template-rows: repeat($num_row, 100px);
+  grid-gap: 20px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+  }
+
+  .base-color-1 {
+    background-color: $base-color-1;
+  }
+
+  .base-color-2 {
+    background-color: $base-color-2;
+  }
+
+  .base-color-3 {
+    background-color: $base-color-3;
+  }
+
+  @for $column from 1 through 4 {
+    @for $row from 1 through 3 {
+      .lighten-#{$row}-#{$column} {
+        $porcentage: calc($porc_lightness * $column);
+        @include palette1.lightness($row, $porcentage);
+      }
+
+
+      .darken-#{$row}-#{$column} {
+        $porcentage: calc($porc_darken/ $column);
+        @include palette1.darken($row, $porcentage);
+      }
+
+    }
+  }
+}

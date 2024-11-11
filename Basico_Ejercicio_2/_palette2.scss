@@ -1,0 +1,41 @@
+@use 'base' as *;
+
+@mixin design() {
+    .item-1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: baseline;
+        border: 0.7px solid rgb(151, 148, 148);
+        border-radius: 5px;
+        box-sizing: content-box;
+        padding: 20px;
+        background-color: $base-color-2;
+    }
+
+    .item-2 {
+        @extend .item-1;
+        @include darken($base-color-2);
+    }
+
+    .item-3 {
+        @extend .item-1;
+        @include lightness($base-color-2);
+    }
+
+    .principal-font {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .secundary-font {
+        @extend .principal-font;
+        font-family: cursive
+    }
+
+    .box-shadow {
+        @extend .item-1;
+        background-color: white;
+        box-shadow: 10px 12px 8px rgb(112, 110, 110);
+    }
+}

@@ -1,0 +1,17 @@
+@use 'palette1' as palette;
+
+body {
+  justify-items: center;
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: repeat(1, 110px);
+  grid-template-rows: 80px 80px 80px 50px 50px 80px;
+
+  @include palette.design();
+}

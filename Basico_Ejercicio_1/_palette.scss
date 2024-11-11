@@ -1,0 +1,36 @@
+@use 'sass:color';
+@use 'base' as base;
+
+@mixin lightness($row, $porcentage) {
+    @if $row ==1 {
+        background-color: color.scale(base.$base-color-1, $lightness: $porcentage);
+        color: color.scale(base.$font-color-1, $lightness: -$porcentage);
+    }
+
+    @else if $row ==2 {
+        background-color: color.scale(base.$base-color-2, $lightness: $porcentage);
+        color: color.scale(base.$font-color-2, $lightness: -$porcentage);
+    }
+
+    @else if $row ==3 {
+        background-color: color.scale(base.$base-color-3, $lightness: $porcentage);
+        color: color.scale(base.$font-color-3, $lightness: -$porcentage);
+    }
+}
+
+@mixin darken($row, $porcentage) {
+    @if $row ==1 {
+        background-color: color.scale(base.$base-color-1, $lightness: -$porcentage);
+        color: color.scale(base.$font-color-1, $lightness: $porcentage);
+    }
+
+    @else if $row ==2 {
+        background-color: color.scale(base.$base-color-2, $lightness: -$porcentage);
+        color: color.scale(base.$font-color-2, $lightness: $porcentage);
+    }
+
+    @else if $row ==3 {
+        background-color: color.scale(base.$base-color-3, $lightness: -$porcentage);
+        color: color.scale(base.$font-color-3, $lightness: $porcentage);
+    }
+}
