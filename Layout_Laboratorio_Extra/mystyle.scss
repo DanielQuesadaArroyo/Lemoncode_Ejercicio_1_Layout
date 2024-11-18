@@ -1,0 +1,125 @@
+@media (min-width: 768px) {
+
+  body {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 90px 1fr 70px;
+    grid-template-areas:
+      'header header'
+      'menu main'
+      'footer footer';
+    margin: 0;
+    height: 100vh;
+
+  }
+
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+
+    .header-search-user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5px;
+    }
+
+    .header {
+      display: flex;
+      flex-grow: 1;
+      background-color: rgb(177, 193, 55);
+      color: white;
+      font-size: 20px;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+
+  menu {
+    display: flex;
+    flex-direction: column;
+    grid-area: menu;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: rgb(45, 89, 15);
+      flex-grow: 1;
+    }
+
+    .nav-enlace {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-align: left;
+      height: 30%;
+      padding: 10px;
+      border: 1px solid rgb(226, 226, 226);
+      background-color: rgb(242, 243, 203);
+      color: black;
+      box-sizing: border-box;
+    }
+  }
+
+  main {
+    background-color: rgb(224, 225, 222);
+    grid-area: main;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  footer {
+    background-color: rgb(242, 243, 203);
+    grid-area: footer;
+    align-content: center;
+
+    div {
+      margin: 20px;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: max-content;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 180px;
+    background-color: white;
+    justify-items: center;
+    align-content: center;
+    border: 1px solid black;
+
+    .card__img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      border: 1px solid grey;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {}
