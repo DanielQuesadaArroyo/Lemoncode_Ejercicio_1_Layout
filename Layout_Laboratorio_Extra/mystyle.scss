@@ -2,8 +2,6 @@
 
   body {
     background-color: white;
-    width: 100vw;
-    height: 100vh;
     margin: 0;
     padding: 0;
   }
@@ -17,7 +15,6 @@
       'menu main'
       'footer footer';
     margin: 0;
-    width: 100vw;
     height: 100vh;
   }
 
@@ -50,7 +47,6 @@
     color: white;
     margin: 0;
     padding: 0;
-
 
     .menu-container {
       display: flex;
@@ -119,7 +115,6 @@
 
   body {
     background-color: white;
-    width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -135,7 +130,6 @@
       'main'
       'footer';
     margin: 0;
-    height: 100vh;
   }
 
   header {
@@ -186,14 +180,14 @@
       text-decoration: none;
       background-color: rgb(242, 243, 203);
       margin: auto;
-      padding: 5px 15px 5px 15px;
+      padding: 5px 15px;
     }
   }
 
   main {
     background-color: rgb(224, 225, 222);
     grid-area: main;
-    padding: 10px 24px 10px 10px;
+    padding: 10px;
 
     .card-container {
       display: flex;
