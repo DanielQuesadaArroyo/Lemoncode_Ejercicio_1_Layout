@@ -2,12 +2,7 @@
 
 @mixin design() {
     .item-1 {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: baseline;
-        border: 0.7px solid rgb(151, 148, 148);
-        box-sizing: content-box;
-        padding: 20px;
+        @extend .item-1;
         background-color: $base-color-1;
     }
 
@@ -21,20 +16,7 @@
         @include lightness($base-color-1);
     }
 
-    .principal-font {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-
-    .secundary-font {
-        @extend .principal-font;
-        font-family: cursive
-    }
-
     .box-shadow {
-        @extend .item-1;
-        background-color: white;
         box-shadow: -12px 12px 10px rgb(112, 110, 110);
     }
 }
